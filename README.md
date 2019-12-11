@@ -20,6 +20,7 @@ The scripts provided in the aws_script folder is the one with which the python f
 Steps to execute locally:
 
 1) Put the video in this folder named as video.avi 
+
 2)Double click master_local.command. 
 
 Starts the whole execution which would take a while depending upon the file size. The output would be saved in the same folder as final_output.avi
