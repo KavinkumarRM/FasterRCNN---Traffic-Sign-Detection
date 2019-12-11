@@ -34,3 +34,5 @@ h5py
  | sklearn
  | Subprocess
  | PIL
+
+The module that i have used for training is in my repository window that i have forked from Kevin Bardool's repository.
