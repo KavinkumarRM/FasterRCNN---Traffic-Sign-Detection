@@ -29,9 +29,9 @@ Starts the whole execution which would take a while depending upon the file size
 Package needed.
 
 h5py
-Keras==2.0.3
-numpy
-opencv-python
-sklearn
-Subprocess
-PIL
+ | Keras==2.0.3
+ | numpy
+ | opencv-python
+ | sklearn
+ | Subprocess
+ | PIL
