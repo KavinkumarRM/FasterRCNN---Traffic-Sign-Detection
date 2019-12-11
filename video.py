@@ -76,21 +76,21 @@ cv2.destroyAllWindows()
 
 
 coumputingonaws="""
-ssh -i ~/Desktop/capstone/deep.pem ubuntu@3.133.75.161 "chmod +x reset_images.sh"
+ssh -i ~/Desktop/capstone/mykey.pem ubuntu@3.133.**.*** "chmod +x reset_images.sh"
 """
 execution="""
-ssh -i ~/Desktop/capstone/deep.pem ubuntu@3.133.75.161 "chmod +x execution.sh"
+ssh -i ~/Desktop/capstone/mykey.pem ubuntu@3.133.**.*** "chmod +x execution.sh"
 """
 
 print("\n computing in AWS ")
 subprocess.run(coumputingonaws,shell=True)
 print("\n\t Reseted in AWS \n\t Sending file to AWS")
-subprocess.run("scp -i ~/Desktop/capstone/deep.pem -r ~/Desktop/opencv/incoming_images ubuntu@3.133.75.161:capstone/keras-frcnn-master/",shell=True)
+subprocess.run("scp -i ~/Desktop/capstone/mykey.pem -r ~/Desktop/opencv/incoming_images ubuntu@3.133.**.***:capstone/keras-frcnn-master/",shell=True)
 print("\n\t Execution")
 subprocess.run(execution,shell=True)
 subprocess.run("rm -r ~/Desktop/opencv/outgoing_images",shell=True)
 print("\n\t Getting back frames")
-subprocess.run("scp -i ~/Desktop/capstone/deep.pem -r ubuntu@3.133.75.161:capstone/keras-frcnn-master/outgoing_images ~/Desktop/opencv/",shell=True)
+subprocess.run("scp -i ~/Desktop/capstone/mykey.pem -r ubuntu@3.133.**.***:capstone/keras-frcnn-master/outgoing_images ~/Desktop/opencv/",shell=True)
 
 def numbers(x):
     print(x)
